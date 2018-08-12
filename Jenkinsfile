@@ -38,6 +38,7 @@ pipeline {
         echo "Merging Development into Master"
         sh 'git merge development'
         echo "Git Push to Origin"
+        sh 'git pull origin'
         sh 'git push origin master'
       }
       post {
